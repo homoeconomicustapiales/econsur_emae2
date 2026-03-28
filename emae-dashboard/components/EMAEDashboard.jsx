@@ -1,9 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
-import dynamic from "next/dynamic";
 import styles from "./EMAEDashboard.module.css";
-
-// ── Dynamic import prevents SSR issues with Recharts ──────────────────────────
-const EMAEChart = dynamic(() => import("./EMAEChart"), { ssr: false });
+import EMAEChart from "./EMAEChart";
 
 // ── Palette ───────────────────────────────────────────────────────────────────
 export const COLORS = [
